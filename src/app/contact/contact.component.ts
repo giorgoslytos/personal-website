@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   postData: string;
   json: string;
   subscription: Subscription;
-  // emailControl = new FormControl('', [Validators.required, Validators.email]);
+  emailControl = new FormControl('', [Validators.required, Validators.email]);
 
   constructor(private httpService: HttpService, private fb: FormBuilder) {}
 
@@ -38,25 +38,24 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.mailForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(3)]],
+      name: '',
       email: ['', [Validators.required, Validators.email]],
       subject: '',
       message: ['', [Validators.required]]
     });
   }
-  // getErrorMessage() {
-  //   return this.emailControl.hasError('required')
-  //     ? 'You must insert a value'
-  //     : this.emailControl.hasError('email')
-  //     ? 'Not a valid email'
-  //     : '';
-  // }
+  getErrorMessage() {
+    return this.emailControl.hasError('required')
+      ? 'You must insert a value'
+      : this.emailControl.hasError('email')
+      ? 'Not a valid email'
+      : '';
+  }
 
   onSubmit() {
     console.log(this.mailForm.value);
     this.httpService
       .sendEmail(this.mailForm.value)
-      // .sendEmail('http://localhost:4200/email', this.mailForm.value)
       .subscribe(
         respone => console.log('Success!', respone),
         error => console.error('Error!', error)
@@ -64,6 +63,6 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // this.subscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 }

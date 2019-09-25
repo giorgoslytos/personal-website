@@ -7,4 +7,31 @@
   opacity: 0.5;
   font-style: italic;
 }
-//asdfasfassdf
+.fas {
+  color: #fb4747;
+  font-size: 1.4rem;
+  animation: heartBeat 2s infinite;
+}
+
+@-webkit-keyframes heartBeat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  14% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  28% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  42% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

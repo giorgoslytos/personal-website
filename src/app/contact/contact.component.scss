@@ -5,11 +5,45 @@
 .text-email {
   display: flex;
   flex-direction: row;
+  margin: 0.4rem;
   width: 100%;
+
+  .containerControl:first-child {
+    margin-right: 0.8rem;
+  }
+
+  .containerControl {
+    margin: 0;
+  }
+}
+
+.containerControl {
+  position: relative;
+  margin: 0.4rem;
+  padding: 0;
+  width: 100%;
+  label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #d8315b;
+    height: 2px;
+    transition: all 0.3s linear;
+  }
 }
 
 .name,
-.email,
+.email {
+  color: #333;
+  background-color: #ccc;
+  font-size: 1.2rem;
+  font-family: 'Fira Code';
+  padding: 0.8rem;
+  border-width: 0;
+  width: 100%;
+  outline: none;
+}
+
 .textarea,
 .subject {
   color: #333;
@@ -18,13 +52,44 @@
   font-family: 'Fira Code';
   padding: 0.8rem;
   border-width: 0;
+  width: 100%;
   outline: none;
-  margin: 0.4rem;
+}
+.textarea {
+  resize: none;
 }
 
-.name,
-.email {
-  width: 100%;
+.submit {
+  color: #cdb292;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-family: 'Fira Code';
+  padding: 0.6rem 1.2rem;
+  border-width: 1px;
+  border-color: #cdb292;
+  outline: none;
+  margin: 0.4rem;
+  display: inline-flex;
+  align-self: flex-end;
+  width: fit-content;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:active {
+    background-color: #cdb292;
+    color: #333;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+  &:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
 }
 
 input:-webkit-autofill,

@@ -7,7 +7,7 @@
     >
     <p class="code2">p</p>
   </div>
-  <p class="code1">p </p>
+  <p class="code1">div</p>
   <form
     [formGroup]="mailForm"
     action=""
@@ -16,42 +16,62 @@
     (ngSubmit)="onSubmit()"
   >
     <div class="text-email">
+      <div class="containerControl">
+        <input
+          type="text"
+          name="name"
+          id=""
+          class="name"
+          placeholder="Name"
+          formControlName="name"
+        />
+      </div>
+      <div class="containerControl">
+        <input
+          type="email"
+          name="email"
+          id=""
+          class="email"
+          placeholder="Email"
+          formControlName="email"
+        />
+        <label for="name" *ngIf="email.invalid && email.touched"></label>
+        <label
+          for="name"
+          [ngStyle]="{ width: email.invalid && email.touched ? '100%' : '0%' }"
+        ></label>
+      </div>
+    </div>
+    <div class="containerControl">
       <input
         type="text"
-        name="name"
+        name="subject"
         id=""
-        class="name"
-        placeholder="Name"
-        formControlName="name"
-      />
-      <label for="name"></label>
-      <input
-        type="email"
-        name="email"
-        id=""
-        class="email"
-        placeholder="Email"
-        formControlName="email"
+        class="subject"
+        placeholder="Subject"
+        formControlName="subject"
       />
     </div>
-    <input
-      type="text"
-      name="subject"
-      id=""
-      class="subject"
-      placeholder="Subject"
-      formControlName="subject"
-    />
-    <textarea
-      name="textarea"
-      id=""
-      cols="30"
-      rows="10"
-      class="textarea"
-      placeholder="Message"
-      formControlName="message"
-    ></textarea>
-    <button [disabled]="mailForm.invalid">Sub</button>
+    <div class="containerControl">
+      <textarea
+        name="textarea"
+        id=""
+        cols="30"
+        rows="10"
+        class="textarea"
+        placeholder="Message"
+        formControlName="message"
+      ></textarea>
+      <label
+        for="textarea"
+        [ngStyle]="{
+          width: message.invalid && message.touched ? '100%' : '0%'
+        }"
+      ></label>
+    </div>
+    <button [disabled]="mailForm.invalid" type="submit" class="submit"
+      >SEND</button
+    >
   </form>
-  <p class="code2">p</p>
+  <p class="code2">div</p>
 </div>

@@ -21,7 +21,6 @@ export class NavbarComponent {
     if (!this.hamIsActive) {
       this.currentScrollPos = window.pageYOffset;
       if (this.currentScrollPos > this.lastScrollPos) {
-        console.log('currentScrollPos > this.lastScrollPos');
         this.transparent = true;
         this.lastScrollPos = this.currentScrollPos;
       } else {

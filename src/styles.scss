@@ -62,18 +62,29 @@ p {
   font-size: 3rem;
   margin: 1rem 0;
   display: inline;
-  &::hover {
-  }
-  &::after {
-  }
 }
 .container {
   padding: 4rem;
-  height: 100vh;
 }
 
 h2 {
   color: #fff;
+}
+
+h3 {
+  font-family: 'Fira Code';
+  font-size: 2rem;
+  font-weight: 100;
+  color: #72c09f;
+
+  &:before {
+    content: '<';
+    color: #ccc;
+  }
+  &:after {
+    content: '/>';
+    color: #ccc;
+  }
 }
 
 h4 {
@@ -168,6 +179,9 @@ li a {
   &-horizontal-2 {
     margin: 0 2rem;
   }
+  &-horizontal-4 {
+    margin: 0 4rem;
+  }
   &-horizontal-1 {
     margin: 0 2rem;
   }
@@ -207,6 +221,9 @@ li a {
     flex-direction: row !important;
     right: 50% !important;
     transform: translateX(50%) !important;
+    margin: 0 !important;
+    position: absolute;
+    top: 65% !important;
   }
 }
 @media only screen and (max-width: 330px) {
