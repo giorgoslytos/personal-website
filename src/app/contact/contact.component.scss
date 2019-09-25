@@ -1,0 +1,43 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+.text-email {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.name,
+.email,
+.textarea,
+.subject {
+  color: #333;
+  background-color: #ccc;
+  font-size: 1.2rem;
+  font-family: 'Fira Code';
+  padding: 0.8rem;
+  border-width: 0;
+  outline: none;
+  margin: 0.4rem;
+}
+
+.name,
+.email {
+  width: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #ccc inset !important;
+  box-shadow: 0 0 0 30px #ccc inset !important;
+  -webkit-text-fill-color: #333 !important;
+}
+// input:-internal-autofill,
+// input:-internal-autofill:hover,
+// input:-internal-autofill:focus,
+// input:-internal-autofill:active {
+//   color: #333 !important;
+// }

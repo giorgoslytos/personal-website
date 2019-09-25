@@ -1,0 +1,57 @@
+<nav #navigation [ngClass]="{ transparent: transparent }">
+  <div class="logo">
+    <h4>portfolio</h4>
+  </div>
+  <ul class="nav-links" [ngClass]="{ 'nav-links-hidden': navLinksHidden }">
+    <li
+      ><a
+        href="#"
+        [ngClass]="{ 'nav-links-hidden': navLinksHidden }"
+        (click)="onClick()"
+        [routerLink]="['/home']"
+        fragment="home"
+        ><span><</span>home<span>/></span></a
+      ></li
+    >
+    <li
+      ><a
+        href="#"
+        [ngClass]="{ 'nav-links-hidden': navLinksHidden }"
+        (click)="onClick()"
+        [routerLink]="['/home']"
+        fragment="about"
+        ><span><</span>about<span>/></span></a
+      ></li
+    >
+    <li
+      ><a
+        href="#"
+        [ngClass]="{ 'nav-links-hidden': navLinksHidden }"
+        (click)="onClick()"
+        [routerLink]="['/home']"
+        fragment="projects"
+        ><span><</span>projects<span>/></span></a
+      ></li
+    >
+    <li
+      ><a
+        href="#"
+        [ngClass]="{ 'nav-links-hidden': navLinksHidden }"
+        (click)="onClick()"
+        [routerLink]="['/home']"
+        fragment="contact"
+        ><span><</span>contact<span>/></span></a
+      ></li
+    >
+  </ul>
+  <button
+    class="burger hamburger hamburger--collapse is-active"
+    type="button"
+    (click)="onClick()"
+    [ngClass]="{ 'is-active': hamIsActive }"
+  >
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+</nav>

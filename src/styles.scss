@@ -1,1 +1,225 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+@import url('https://fonts.googleapis.com/css?family=Fira+Code|Montserrat|Sacramento|Orbitron&display=swap');
+
+$color-font-1: #2964a388;
+$color-font-2: #6496b4;
+$color-font-2: #b96346;
+$color-font-2: #5d6e79;
+$color-font-2: #6496b4;
+$color-font-2: #b3d2e6;
+$color-font-2: #5998c0;
+$color-font-2: #6496b465;
+$color-font-2: #496d8377;
+$color-font-2: #5998c0;
+$color-font-2: #5998c0;
+$color-font-2: #96a8b6;
+$color-font-2: #b96346;
+
+$Red: #c08872;
+$Green: #72c09f;
+$Yellow: #c8a984;
+$Blue: #6196b8;
+$Magenta: #c28097;
+$Cyan: #72b7c0;
+$White: #c5cdd3;
+$BrightBlack: #425866;
+$BrightRed: #ca8468;
+$BrightGreen: #84c8ab;
+$BrightYellow: #d1aa7b;
+$BrightBlue: #68a4ca;
+$BrightMagenta: #c88da2;
+$BrightCyan: #84c0c8;
+$BrightWhite: #c5d1d3;
+$Gold: #cdb292;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #1b2932;
+  color: #ddd;
+}
+nav {
+  background-color: #0e1920;
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: 'Fira Code';
+  color: #ddd;
+}
+.engineer {
+  font-family: 'Orbitron';
+  font-weight: 100;
+  font-size: 3rem;
+  margin: 1rem 0;
+  display: inline;
+  &::hover {
+  }
+  &::after {
+  }
+}
+.container {
+  padding: 4rem;
+  height: 100vh;
+}
+
+h2 {
+  color: #fff;
+}
+
+h4 {
+  font-family: 'Orbitron';
+  font-size: 2rem;
+  font-weight: 100;
+  color: #cdb292;
+
+  &:before {
+    content: '<';
+    color: #ccc;
+  }
+  &:after {
+    content: '/>';
+    color: #ccc;
+  }
+}
+
+li a {
+  font-family: 'Fira Code';
+  text-decoration: none;
+  list-style: none;
+  color: #aaa;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.fab {
+  font-size: 5rem;
+  transition: color 0.8s ease;
+}
+.fas {
+  font-size: 3rem;
+  transition: color 0.8s ease;
+}
+
+.fa-html5 {
+  &:hover {
+    color: #ec6630;
+  }
+}
+.fa-css3-alt {
+  &:hover {
+    color: rgb(21, 114, 182);
+  }
+}
+.fa-js {
+  &:hover {
+    color: #f7e018;
+  }
+}
+.fa-angular {
+  &:hover {
+    color: #dd0031;
+  }
+}
+
+.code1 {
+  margin-left: 1rem;
+  font-family: 'Fira Code';
+  font-style: italic;
+  color: #6196b8;
+  font-size: 1rem;
+  &::before {
+    content: '<';
+  }
+  &::after {
+    content: '>';
+  }
+}
+.code2 {
+  margin-left: 1rem;
+  color: #6196b8;
+  font-family: 'Fira Code';
+  font-size: 1rem;
+
+  font-style: italic;
+  &::before {
+    content: '<';
+  }
+  &::after {
+    content: '/>';
+  }
+}
+
+.transparent {
+  opacity: 0;
+  z-index: -1 !important;
+}
+
+.margin {
+  &-horizontal-2 {
+    margin: 0 2rem;
+  }
+  &-horizontal-1 {
+    margin: 0 2rem;
+  }
+  &-left-right {
+    margin: 0 8rem;
+  }
+  &-left-right-bg {
+    margin: 0 12rem;
+  }
+  &-bottom {
+    margin-bottom: 4rem;
+  }
+  &-vertical {
+    margin: 4rem 0;
+  }
+  &-horizontal-16 {
+    margin: 0 1.6rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  li a {
+    font-size: 7vw;
+  }
+  .container {
+    padding: 8rem 0;
+  }
+  .margin-left-right {
+    margin: 0 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 90%;
+  }
+  .social {
+    flex-direction: row !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+  }
+}
+@media only screen and (max-width: 330px) {
+  html {
+    font-size: 85%;
+  }
+}
+@media only screen and (max-height: 700px) {
+  nav {
+    height: 10vh !important;
+  }
+  .nav-links {
+    top: 10vh !important;
+    height: 90vh !important;
+  }
+}

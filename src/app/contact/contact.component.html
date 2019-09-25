@@ -1,0 +1,57 @@
+<div class="container margin-left-right" id="contact">
+  <h4 class="margin-bottom">contact</h4>
+  <div class="margin-vertical">
+    <p class="code1">p </p
+    ><p class="margin-horizontal-2"
+      >In case you want to contact me you can use the following form</p
+    >
+    <p class="code2">p</p>
+  </div>
+  <p class="code1">p </p>
+  <form
+    [formGroup]="mailForm"
+    action=""
+    method="POST"
+    class="form-container margin-horizontal-16"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="text-email">
+      <input
+        type="text"
+        name="name"
+        id=""
+        class="name"
+        placeholder="Name"
+        formControlName="name"
+      />
+      <label for="name"></label>
+      <input
+        type="email"
+        name="email"
+        id=""
+        class="email"
+        placeholder="Email"
+        formControlName="email"
+      />
+    </div>
+    <input
+      type="text"
+      name="subject"
+      id=""
+      class="subject"
+      placeholder="Subject"
+      formControlName="subject"
+    />
+    <textarea
+      name="textarea"
+      id=""
+      cols="30"
+      rows="10"
+      class="textarea"
+      placeholder="Message"
+      formControlName="message"
+    ></textarea>
+    <button [disabled]="mailForm.invalid">Sub</button>
+  </form>
+  <p class="code2">p</p>
+</div>
