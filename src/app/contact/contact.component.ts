@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { HttpService } from '../shared/http.service';
 import { Subscription } from 'rxjs';
+import Typed from 'typed.js';
 
 @Component({
   selector: 'app-contact',
@@ -19,7 +20,17 @@ export class ContactComponent implements OnInit, OnDestroy {
   postData: string;
   json: string;
   subscription: Subscription;
+  viewportVisited = false;
   emailControl = new FormControl('', [Validators.required, Validators.email]);
+  typedOptions = {
+    strings: ['contact'],
+    typeSpeed: 200,
+    backSpeed: 100,
+    startDelay: 500,
+    showCursor: false,
+    loop: false
+  };
+  typed: Typed;
 
   constructor(private httpService: HttpService, private fb: FormBuilder) {}
 
@@ -43,6 +54,7 @@ export class ContactComponent implements OnInit, OnDestroy {
       subject: '',
       message: ['', [Validators.required]]
     });
+    this.typed = new Typed('.typed-element-contact', this.typedOptions);
   }
   getErrorMessage() {
     return this.emailControl.hasError('required')
@@ -60,6 +72,24 @@ export class ContactComponent implements OnInit, OnDestroy {
         respone => console.log('Success!', respone),
         error => console.error('Error!', error)
       );
+  }
+
+  public inViewportTitle({
+    target,
+    visible
+  }: {
+    target: Element;
+    visible: boolean;
+  }): void {
+    if (visible && !this.viewportVisited) {
+      this.typed.reset();
+      this.viewportVisited = true;
+      console.log('contact is visible');
+    }
+    if (!visible) {
+      this.viewportVisited = false;
+      console.log('contact is invisible');
+    }
   }
 
   ngOnDestroy() {

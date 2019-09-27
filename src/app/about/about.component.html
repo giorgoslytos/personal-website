@@ -1,32 +1,62 @@
-<div class="container margin-left-right" id="about">
-  <h4 class="margin-bottom">aboout</h4>
-  <p class="code1">div</p>
-  <h3 class="margin-horizontal-2">education</h3>
-  <p class="code2">div</p>
-  <p class="code1 margin-horizontal-2">p</p>
-  <p class="margin-horizontal-4"
-    >Graduate of the
-    <a href="https://www.e-ce.uth.gr/?lang=en" target="_blank"
-      >Electrical and Computer Engineering Department of University of
-      Thessaly</a
-    ></p
-  >
-  <p class="code2 margin-horizontal-2">p</p>
-  <p class="code2 margin-bottom">div</p>
+<h4
+  class="container typed-element-about"
+  id="about"
+  inViewport
+  inViewportOptions="{ threshold: [0] }"
+  (inViewportAction)="inViewportTitle($event)"
+></h4>
+<div class="about">
+  <div class="padding-2">
+    <p class="code1">div</p>
+    <h3 class="margin-horizontal-2">education</h3>
+    <p class="code2">div</p>
+    <p class="code1 margin-horizontal-2">p</p>
+    <p class="margin-horizontal-4"
+      >Graduate of the
+      <a href="https://www.e-ce.uth.gr/?lang=en" target="_blank"
+        >Electrical and Computer Engineering Department</a
+      >
+      of University of Thessaly (integrated Master)</p
+    >
+    <p class="code2 margin-horizontal-2">p</p>
+    <p class="code2 margin-bottom">div</p>
 
-  <p class="code1">div</p>
-  <h3 class="margin-horizontal-2">skills</h3>
-  <p class="code2">div</p>
-  <p class="code1 margin-horizontal-2">p</p>
-  <p class="margin-horizontal-4"
-    >The main area of my expertise is front-end web development.</p
-  >
-  <p class="code2 margin-horizontal-2">p</p>
-  <p class="code1 margin-horizontal-2">p</p>
-  <p class="margin-horizontal-4"
-    >I have some basic knowledge on the back-end and solid computer science
-    foundations.</p
-  >
-  <p class="code2 margin-horizontal-2">p</p>
-  <p class="code2">div</p>
+    <p class="code1">div</p>
+    <h3 class="margin-horizontal-2">education++</h3>
+    <p class="code2">div</p>
+    <p class="code1 margin-horizontal-2">p</p>
+    <p class="margin-horizontal-4"
+      >I have solid computer science foundations.</p
+    >
+    <p class="code2 margin-horizontal-2">p</p>
+
+    <p class="code1 margin-horizontal-2">p</p>
+    <p class="margin-horizontal-4"
+      >The main field of my expertise is front end web development</p
+    >
+    <p class="code2 margin-horizontal-2">p</p>
+    <p class="code1 margin-horizontal-2">p</p>
+    <p class="margin-horizontal-4"
+      >I have a basic knowledge of the back end and databases, which I plan to
+      expand</p
+    >
+    <p class="code2 margin-horizontal-2">p</p>
+
+    <p class="code1 margin-horizontal-2">p</p>
+    <p class="margin-horizontal-4"
+      >I'm a big advocate for continuous learning.</p
+    >
+    <p class="code2 margin-horizontal-2">p</p>
+    <p class="code1 margin-horizontal-2">p</p>
+    <p class="margin-horizontal-4">My skills are continuously expanding</p>
+    <p class="code2 margin-horizontal-2">p</p>
+    <p class="code1 margin-horizontal-2">p</p>
+    <p class="margin-horizontal-4">I'm a proficient English speaker too! ;)</p>
+    <p class="code2 margin-horizontal-2">p</p>
+    <p class="code2">div</p>
+  </div>
+
+  <div class="skills">
+    <app-skills></app-skills>
+  </div>
 </div>

@@ -1,0 +1,57 @@
+$Red: #c08872;
+$Green: #72c09f;
+$Yellow: #c8a984;
+$Blue: #6196b8;
+$Magenta: #c28097;
+$Cyan: #72b7c0;
+.red {
+  color: $Red;
+}
+.green {
+  color: $Green;
+}
+.yellow {
+  color: $Yellow;
+}
+.blue {
+  color: $Blue;
+}
+.magenta {
+  color: $Magenta;
+}
+.cyan {
+  color: $Cyan;
+}
+
+.methods {
+  color: $Red;
+}
+
+.prop1 {
+  color: #72b7c0;
+}
+.type {
+  color: $Blue;
+}
+
+.string {
+  color: $Green;
+}
+
+.margin-top-2 {
+  margin: 2rem 0 0 0;
+}
+.title {
+  font-size: 2rem;
+  color: #72c09f;
+}
+
+.margin-left-right-bg {
+  border: 2px #ccc dashed;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 900px) {
+  .margin-left-right-bg {
+    margin: 0 1rem;
+  }
+}

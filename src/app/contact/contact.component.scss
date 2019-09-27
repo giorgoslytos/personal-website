@@ -1,3 +1,7 @@
+.container {
+  padding-bottom: 2rem;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -25,9 +29,9 @@
   label {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0.1rem;
     background-color: #d8315b;
-    height: 2px;
+    height: 3px;
     transition: all 0.3s linear;
   }
 }
@@ -42,6 +46,7 @@
   border-width: 0;
   width: 100%;
   outline: none;
+  border-radius: 0.4rem 0.4rem 0.4rem 0.4rem;
 }
 
 .textarea,
@@ -54,6 +59,21 @@
   border-width: 0;
   width: 100%;
   outline: none;
+  border-radius: 0.4rem 0.4rem 0.4rem 0.4rem;
+}
+.containerControl-textarea {
+  position: relative;
+  margin: 0.4rem;
+  padding: 0;
+  width: 100%;
+  label {
+    position: absolute;
+    bottom: 4px;
+    left: 0.1rem;
+    background-color: #d8315b;
+    height: 3px;
+    transition: all 0.3s linear;
+  }
 }
 .textarea {
   resize: none;

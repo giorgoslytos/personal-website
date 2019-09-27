@@ -1,5 +1,10 @@
 <div class="container margin-left-right" id="contact">
-  <h4 class="margin-bottom">contact</h4>
+  <h4
+    class="margin-bottom typed-element-contact"
+    inViewport
+    inViewportOptions="{ threshold: [0] }"
+    (inViewportAction)="inViewportTitle($event)"
+  ></h4>
   <div class="margin-vertical">
     <p class="code1">p </p
     ><p class="margin-horizontal-2"
@@ -38,7 +43,9 @@
         <label for="name" *ngIf="email.invalid && email.touched"></label>
         <label
           for="name"
-          [ngStyle]="{ width: email.invalid && email.touched ? '100%' : '0%' }"
+          [ngStyle]="{
+            width: email.invalid && email.touched ? 'calc(100% - .2rem)' : '0%'
+          }"
         ></label>
       </div>
     </div>
@@ -52,7 +59,7 @@
         formControlName="subject"
       />
     </div>
-    <div class="containerControl">
+    <div class="containerControl-textarea">
       <textarea
         name="textarea"
         id=""
@@ -65,7 +72,8 @@
       <label
         for="textarea"
         [ngStyle]="{
-          width: message.invalid && message.touched ? '100%' : '0%'
+          width:
+            message.invalid && message.touched ? 'calc(100% - .2rem)' : '0%'
         }"
       ></label>
     </div>

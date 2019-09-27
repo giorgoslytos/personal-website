@@ -7,6 +7,7 @@ import Typed from 'typed.js';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  titleVisible = false;
   typedOptions = {
     strings: ['Software Engineer', 'Web Developer'],
     typeSpeed: 100,
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit {
     showCursor: false,
     loop: false
   };
+
   constructor() {}
 
   ngOnInit() {

@@ -1,16 +1,113 @@
 <div class="container margin-left-right" id="projects">
-  <p>projects works!</p>
-  <p
-    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laboriosam
-    suscipit ullam doloribus ex repudiandae beatae libero tempora architecto,
-    repellendus quis corporis quod excepturi debitis quaerat illum consequatur
-    officiis vitae nostrum necessitatibus autem delectus. Consectetur nam
-    repellendus ex vel iure odio tempore ut hic facilis distinctio, delectus
-    iste quidem illum possimus! Laboriosam maxime minima neque at aut voluptatem
-    cupiditate, beatae obcaecati, nostrum libero odit error sunt voluptate
-    voluptatum? Impedit, voluptates! Ut perspiciatis voluptates, sint
-    consequuntur sequi a, blanditiis ad, tenetur exercitationem quasi nesciunt
-    beatae itaque cum et alias repellat assumenda. Iste molestias quasi, illo
-    vel facilis quis laboriosam inventore incidunt?</p
-  >
+  <h4
+    class="typed-element-projects"
+    inViewport
+    inViewportOptions="{ threshold: [0] }"
+    (inViewportAction)="inViewportTitle($event)"
+  ></h4>
+  <div class="project">
+    <div class="images">
+      <img
+        src="../../assets/img/laptop-fata-morgana.png"
+        class="laptop"
+        alt=""
+      />
+      <img
+        src="../../assets/img/mobile-fata-morgana.png"
+        class="mobile"
+        alt=""
+      />
+    </div>
+    <div
+      class="paragraph margin-horizontal-left"
+      [@flyInOut]="statePar1 ? 'show' : 'hide'"
+      inViewport
+      inViewportOptions="{ threshold: [0] }"
+      (inViewportAction)="inViewportPar1($event)"
+    >
+      <p><span class="yellow">.fataMorgana</span> &#123;</p>
+      <p class="margin-horizontal-2 grey"
+        >// A restaurant app made using Angular and</p
+      >
+      <p class="margin-horizontal-2 grey">// Firebase for storing the data</p>
+      <p class="margin-horizontal-2 grey">// Designed and Coded by me</p>
+      <p class="margin-horizontal-2"
+        ><span class="yellow">&:checked </span>&#123;</p
+      >
+      <p class="margin-horizontal-4">
+        <span class="red">responsive</span>: <span class="blue">true;</span></p
+      >
+      <p class="margin-horizontal-4"
+        ><span class="red">::ng-deep</span>: <span class="blue">true;</span></p
+      >
+      <p class="margin-horizontal-4"
+        ><span class="red">reactive-forms</span>:
+        <span class="blue">true;</span></p
+      >
+      <p class="margin-horizontal-4"
+        ><span class="red">angular-validators</span>:
+        <span class="blue">true;</span></p
+      >
+      <p class="margin-horizontal-4"
+        ><span class="red">custom-validator</span>:
+        <span class="blue">true;</span></p
+      >
+      <p class="margin-horizontal-4"
+        ><span class="red">firebase</span>: <span class="blue">true;</span></p
+      >
+      <p class="margin-horizontal-4"
+        ><span class="red">child-parent-communication</span>:
+        <span class="blue">true;</span></p
+      >
+      <p class="margin-horizontal-4"
+        ><span class="red">use-of-3rd-party-packages</span>:
+        <span class="blue">true;</span></p
+      >
+      <p class="margin-horizontal-4"
+        ><span class="red">use-of-3rd-party-directives</span>:
+        <span class="blue">true;</span></p
+      >
+      <p class="margin-horizontal-4"
+        ><span class="red">sass</span>: <span class="blue">true;</span></p
+      >
+      <p class="margin-horizontal-2">&#125;</p>
+      <p>&#125;</p>
+    </div>
+  </div>
+  <div class="project">
+    <div class="images">
+      <img
+        src="../../assets/img/laptop-hsl-selector.png"
+        class="laptop"
+        alt=""
+      />
+    </div>
+    <div
+      class="paragraph margin-horizontal-left"
+      [@flyInOut]="statePar2 ? 'show' : 'hide'"
+      inViewport
+      inViewportOptions="{ threshold: [0] }"
+      (inViewportAction)="inViewportPar2($event)"
+    >
+      <p><span class="yellow">.HSLColorSelector</span> &#123;</p>
+      <p class="margin-horizontal-2 grey"
+        >// An OOP Vanilla JavaScript webpage</p
+      >
+      <p class="margin-horizontal-2 grey">// Requires a mouse with a wheel</p>
+      <p class="margin-horizontal-2 grey">// to be fully functional</p>
+      <p class="margin-horizontal-2 yellow">&:checked &#123;</p>
+      <p class="margin-horizontal-4"
+        ><span class="red">VanillaJavaScript</span>:
+        <span class="blue">true</span>;</p
+      >
+      <p class="margin-horizontal-4"
+        ><span class="red">HTMLCanvas</span>: <span class="blue">true</span>;</p
+      >
+      <p class="margin-horizontal-4"
+        ><span class="red">JSObjects</span>: <span class="blue">true</span>;</p
+      >
+      <p class="margin-horizontal-2">&#125;</p>
+      <p>&#125;</p>
+    </div>
+  </div>
 </div>
