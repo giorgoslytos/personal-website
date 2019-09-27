@@ -3,18 +3,19 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const sendMail = require('./mail');
 const path = require('path');
+const http = require('http');
 
-
-const PORT = process.env.PORT || 3000;
 const app = express();
 
-// app.use(express.static(__dirname + '../../dist/giorgoslytos'));
+const port = process.env.PORT || 3000;
+
+app.use(express.static(path.join(__dirname, 'giorgoslytos')));
+
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', function (req, res) {
-  res.send('Hello from server')
-});
+
+app.get('/*', (req, res) => res.sendFile(path.join(__dirname)));
 
 app.use(express.urlencoded({
   extended: false
@@ -36,4 +37,6 @@ app.post('/email', (req, res) => {
 });
 
 //start server
-app.listen(PORT, () => console.log('Server is starting on PORT, ', PORT));
+const server = http.createServer(app);
+
+server.listen(port, () => console.log('Server is starting on PORT, '));

@@ -13,8 +13,4 @@ export class HttpService {
   sendEmail(data) {
     return this.http.post(this.url, data);
   }
-
-  // sendEmail(url, data): Observable<Iinfo> {
-  //   return this.http.post<Iinfo>(url, data);
-  // }
 }

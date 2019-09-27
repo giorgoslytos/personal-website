@@ -20,6 +20,7 @@
     method="POST"
     class="form-container margin-horizontal-16"
     (ngSubmit)="onSubmit()"
+    *ngIf="!emailSendSuccessfully"
   >
     <div class="text-email">
       <div class="containerControl">
@@ -82,5 +83,16 @@
       >SEND</button
     >
   </form>
+  <div *ngIf="emailSendSuccessfully" class="success">
+    <p class="successOrFailure"
+      >Your email has been send successfully! Keep in touch!</p
+    >
+  </div>
+  <div *ngIf="emailFailed" class="success">
+    <p class="successOrFailure"
+      >There was an error when attempted to send your email. Please try again
+      later!</p
+    >
+  </div>
   <p class="code2">div</p>
 </div>

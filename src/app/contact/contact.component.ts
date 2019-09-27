@@ -21,6 +21,8 @@ export class ContactComponent implements OnInit, OnDestroy {
   json: string;
   subscription: Subscription;
   viewportVisited = false;
+  emailSendSuccessfully: boolean;
+  emailFailed: boolean;
   emailControl = new FormControl('', [Validators.required, Validators.email]);
   typedOptions = {
     strings: ['contact'],
@@ -66,12 +68,16 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   onSubmit() {
     console.log(this.mailForm.value);
-    this.httpService
-      .sendEmail(this.mailForm.value)
-      .subscribe(
-        respone => console.log('Success!', respone),
-        error => console.error('Error!', error)
-      );
+    this.httpService.sendEmail(this.mailForm.value).subscribe(
+      respone => {
+        console.log('Success!', respone);
+        this.emailSendSuccessfully = true;
+      },
+      error => {
+        console.error('Error!', error);
+        this.emailFailed = true;
+      }
+    );
   }
 
   public inViewportTitle({
