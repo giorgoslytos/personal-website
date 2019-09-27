@@ -234,3 +234,20 @@ svg {
     font-size: 3rem;
   }
 }
+@media screen and (max-width: 400px) {
+  .georgioslytos {
+    width: 20rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+  .fab {
+    font-size: 2rem !important;
+  }
+}
+@media screen and (max-height: 700px) {
+  .main-section {
+    margin: 1rem !important;
+  }
+}

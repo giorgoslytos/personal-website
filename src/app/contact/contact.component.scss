@@ -120,9 +120,12 @@ input:-webkit-autofill:active {
   box-shadow: 0 0 0 30px #ccc inset !important;
   -webkit-text-fill-color: #333 !important;
 }
-// input:-internal-autofill,
-// input:-internal-autofill:hover,
-// input:-internal-autofill:focus,
-// input:-internal-autofill:active {
-//   color: #333 !important;
-// }
+
+@media screen and (max-width: 800px) {
+  .text-email {
+    flex-direction: column;
+  }
+  .email {
+    margin-top: 0.8rem;
+  }
+}

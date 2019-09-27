@@ -64,7 +64,7 @@ p {
   display: inline;
 }
 .container {
-  padding: 4rem;
+  padding: 4rem 4rem 0 4rem;
 }
 
 h2 {
@@ -198,7 +198,7 @@ li a {
     margin-bottom: 4rem;
   }
   &-vertical {
-    margin: 4rem 0;
+    margin: 0 0 4rem 0;
   }
   &-horizontal-16 {
     margin: 0 1.6rem;
@@ -208,15 +208,15 @@ li a {
   }
 }
 
-@media screen and (max-width: 900px) {
-  li a {
-    font-size: 7vw;
-  }
-  .container {
-    padding: 8rem 0;
-  }
-  .margin-left-right {
-    margin: 0 1rem;
+.component-title {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  padding: 5rem 8rem 0 8rem;
+}
+
+@media only screen and (max-width: 330px) {
+  html {
+    font-size: 85%;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -231,10 +231,18 @@ li a {
     position: absolute;
     top: 65% !important;
   }
+  .component-title {
+    padding: 5rem 1rem 0 1rem;
+  }
 }
-@media only screen and (max-width: 330px) {
-  html {
-    font-size: 85%;
+@media only screen and (max-width: 570px) {
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    padding: 0;
+  }
+  .margin-left-right {
+    margin: 2rem;
   }
 }
 @media only screen and (max-height: 700px) {
@@ -244,5 +252,22 @@ li a {
   .nav-links {
     top: 10vh !important;
     height: 90vh !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  li a {
+    font-size: 7vw;
+  }
+  .margin-left-right {
+    margin: 0 1rem;
+  }
+  .images {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .margin-left-right {
+    margin: 0 1rem;
   }
 }

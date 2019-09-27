@@ -18,18 +18,18 @@ import {
         'show',
         style({
           opacity: 1,
-          transform: 'translate(0, 0)'
+          transform: 'translateX(0px)'
         })
       ),
       state(
         'hide',
         style({
           opacity: 0,
-          transform: 'translate(80px, 0)'
+          transform: 'translateX(80px)'
         })
       ),
-      transition('show => hide', animate('.4s ease-out')),
-      transition('hide => show', animate('.4s ease-out'))
+      transition('show => hide', animate('.8s ease-out')),
+      transition('hide => show', animate('.8s ease-out'))
     ])
   ]
 })

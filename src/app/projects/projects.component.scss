@@ -12,16 +12,24 @@
 .project {
   display: flex;
   flex-wrap: wrap;
-  margin: 8rem 0;
+  margin: 0 0 4rem 0;
   justify-content: space-between;
+  overflow: hidden;
   .images {
     flex: 1;
     margin-bottom: 2rem;
   }
   .paragraph {
     flex: 1;
-    min-width: 26rem;
   }
+}
+
+a {
+  text-decoration: none;
+}
+
+.paragraph {
+  min-width: 20rem;
 }
 
 .typed-element-projected {
@@ -53,8 +61,45 @@ $Cyan: #72b7c0;
   opacity: 0.5;
 }
 
-@media screen and (max-width: 1500px) {
-  .margin-left-right {
-    margin: 0 1rem;
+.submit {
+  color: #cdb292;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-family: 'Fira Code';
+  padding: 0.6rem 1.2rem;
+  border-width: 1px;
+  border-color: #cdb292;
+  outline: none;
+  margin: 2rem;
+  display: inline-flex;
+  align-self: flex-end;
+  width: fit-content;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:active {
+    background-color: #cdb292;
+    color: #333;
   }
+
+  &:active {
+    transform: translateY(1px);
+  }
+  &:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+}
+@media screen and (max-width: 500px) {
+  .laptop {
+    width: 15rem;
+  }
+  .mobile {
+    width: 4rem;
+  }
+}
+@media screen and (max-width: 1500px) {
 }

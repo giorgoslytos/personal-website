@@ -1,10 +1,11 @@
-<div class="container margin-left-right" id="projects">
-  <h4
-    class="typed-element-projects"
-    inViewport
-    inViewportOptions="{ threshold: [0] }"
-    (inViewportAction)="inViewportTitle($event)"
-  ></h4>
+<h4
+  class="component-title typed-element-projects"
+  inViewport
+  inViewportOptions="{ threshold: [0] }"
+  (inViewportAction)="inViewportTitle($event)"
+  id="projects"
+></h4>
+<div class="container margin-left-right">
   <div class="project">
     <div class="images">
       <img
@@ -17,6 +18,16 @@
         class="mobile"
         alt=""
       />
+      <div class="buttons">
+        <a href="https://github.com/giorgoslytos/fata-morgana" target="_blank"
+          ><button type="submit" class="submit">code</button></a
+        >
+        <a
+          href="http://fata-morgana.s3-website.eu-central-1.amazonaws.com/"
+          target="_blank"
+          ><button type="submit" class="submit">demo</button></a
+        >
+      </div>
     </div>
     <div
       class="paragraph margin-horizontal-left"
@@ -81,6 +92,20 @@
         class="laptop"
         alt=""
       />
+      <div class="buttons">
+        <a
+          href="https://github.com/giorgoslytos/hslcolorselector"
+          target="_blank"
+        >
+          <button type="submit" class="submit">code</button></a
+        >
+        <a
+          href="https://giorgoslytos.github.io/hslcolorselector/"
+          target="_blank"
+        >
+          <button type="submit" class="submit">demo</button></a
+        >
+      </div>
     </div>
     <div
       class="paragraph margin-horizontal-left"
