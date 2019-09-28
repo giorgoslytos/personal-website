@@ -34,11 +34,9 @@ export class AboutComponent implements OnInit {
     if (visible && !this.viewportVisited) {
       this.typed.reset();
       this.viewportVisited = true;
-      console.log('about is visible');
     }
     if (!visible) {
       this.viewportVisited = false;
-      console.log('about is invisible');
     }
   }
 }

@@ -39,4 +39,4 @@ app.post('/email', (req, res) => {
 //start server
 const server = http.createServer(app);
 
-server.listen(port, () => console.log('Server is starting on PORT, '));
+server.listen(port, () => console.log('Server is starting on PORT, ', port));

@@ -67,7 +67,6 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    console.log(this.mailForm.value);
     this.httpService.sendEmail(this.mailForm.value).subscribe(
       respone => {
         console.log('Success!', respone);
@@ -90,11 +89,9 @@ export class ContactComponent implements OnInit, OnDestroy {
     if (visible && !this.viewportVisited) {
       this.typed.reset();
       this.viewportVisited = true;
-      console.log('contact is visible');
     }
     if (!visible) {
       this.viewportVisited = false;
-      console.log('contact is invisible');
     }
   }
 
